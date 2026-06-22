@@ -352,17 +352,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
+      flex-wrap: nowrap;
+      gap: 0;
     }
 
     .trust-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       color: rgba(255,255,255,0.7);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
+      flex: 1;
+      justify-content: center;
+      padding: 0 16px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
     }
 
     .trust-icon {
