@@ -22,8 +22,8 @@
     "@type": "HomeAndConstructionBusiness",
     "name": "RSC Renos",
     "url": "https://www.rscrenos.com",
-    "telephone": "+1-800-RSC-RENO",
-    "description": "Premium home renovation and remodeling contractor specializing in kitchens, bathrooms, basements, and full home transformations.",
+    "telephone": "+17059852640",
+    "description": "RSC Renos is a father and son renovation company (Rick and Mike Savo) specializing in kitchens, bathrooms, and basement finishing in Barrie and across Simcoe County.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Barrie",
@@ -164,14 +164,14 @@
       min-height: 100vh;
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       overflow: hidden;
     }
 
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1800&q=80');
+      background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1800&q=80');
       background-size: cover;
       background-position: center;
       transform: scale(1.05);
@@ -196,8 +196,8 @@
       z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 48px;
-      padding-top: 80px;
+      width: 100%;
+      padding: 140px 48px 80px;
     }
 
     .hero-badge {
@@ -302,15 +302,13 @@
     }
 
     .hero-stats {
-      position: absolute;
-      bottom: 60px;
-      left: 0; right: 0;
+      position: relative;
       z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 48px;
       display: flex;
       gap: 48px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.12);
     }
 
     .hero-stat {
@@ -645,6 +643,50 @@
       font-size: 12px;
       color: white;
       flex-shrink: 0;
+    }
+
+    /* ─── TEAM DUO ─── */
+    .team-duo {
+      display: flex;
+      gap: 20px;
+      margin: 28px 0 24px;
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      background: var(--light-gray);
+      border: 1px solid #E8E4DC;
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    .team-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .team-member strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .team-member span {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: block;
     }
 
     /* ─── PROCESS ─── */
@@ -1357,8 +1399,8 @@
       nav { padding: 0 24px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-content { padding: 0 24px; padding-top: 80px; }
-      .hero-stats { padding: 0 24px; gap: 24px; }
+      .hero-content { padding: 100px 24px 48px; }
+      .hero-stats { gap: 24px; }
       .hero-stat-num { font-size: 28px; }
       .section-inner { padding: 0 24px; }
       .section { padding: 64px 0; }
@@ -1370,6 +1412,7 @@
       .testimonials-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
+      .team-duo { flex-direction: column; }
       .footer-inner { grid-template-columns: 1fr; }
       .trust-bar-inner { justify-content: center; }
       .awards-logos { gap: 28px; }
@@ -1443,12 +1486,11 @@
         <a href="#contact" class="btn-primary">
           &#128197; Get Your Free Estimate
         </a>
-        <a href="#gallery" class="btn-secondary">
-          &#128247; View Our Work
+        <a href="tel:+17059852640" class="btn-secondary">
+          &#128222; 705-985-2640
         </a>
       </div>
-    </div>
-    <div class="hero-stats">
+      <div class="hero-stats">
       <div class="hero-stat">
         <span class="hero-stat-num" data-count="500">0</span>
         <span class="hero-stat-label">Projects Completed</span>
@@ -1468,10 +1510,12 @@
         <span class="hero-stat-num" data-count="47">0</span>
         <span class="hero-stat-label">Industry Awards</span>
       </div>
-    </div>
+    </div><!-- /hero-stats -->
+    </div><!-- /hero-content -->
   </section>
 
   <!-- TRUST BAR -->
+
   <div class="trust-bar">
     <div class="trust-bar-inner">
       <div class="trust-item">
@@ -1536,8 +1580,8 @@
       <div class="services-header fade-up">
         <div class="title-line"></div>
         <div class="section-eyebrow">What We Do</div>
-        <h2 class="section-title">Renovation Services That Redefine Your Space</h2>
-        <p class="section-sub">From a single room refresh to a complete home overhaul, our expert craftsmen deliver flawless results every time.</p>
+        <h2 class="section-title">Three Specialties. One Standard of Excellence.</h2>
+        <p class="section-sub">We focus on what we do best — kitchens, bathrooms, and basements — so every project gets the full attention and craftsmanship it deserves.</p>
       </div>
       <div class="services-grid">
         <div class="service-card fade-up">
@@ -1567,33 +1611,6 @@
             <a href="#contact" class="service-link">Explore Basements &#8594;</a>
           </div>
         </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80')"></div>
-          <div class="service-card-body">
-            <div class="service-card-icon">&#127963;</div>
-            <h3>Home Additions</h3>
-            <p>Need more room? Our structural experts design and build seamless additions — second storeys, sunrooms, garages, and more.</p>
-            <a href="#contact" class="service-link">Explore Additions &#8594;</a>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80')"></div>
-          <div class="service-card-body">
-            <div class="service-card-icon">&#128205;</div>
-            <h3>Full Home Renovations</h3>
-            <p>A complete transformation from top to bottom. Open-concept layouts, new flooring, modern finishes — your dream home, realized.</p>
-            <a href="#contact" class="service-link">Explore Full Renos &#8594;</a>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80')"></div>
-          <div class="service-card-body">
-            <div class="service-card-icon">&#127794;</div>
-            <h3>Outdoor Living Spaces</h3>
-            <p>Custom decks, patios, pergolas, and outdoor kitchens that extend your living space and dramatically boost curb appeal.</p>
-            <a href="#contact" class="service-link">Explore Outdoor &#8594;</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1606,27 +1623,46 @@
           <div class="about-img-main" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80')"></div>
           <div class="about-img-accent" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80')"></div>
           <div class="about-badge">
-            <div class="about-badge-num">15+</div>
-            <div class="about-badge-text">Years of<br/>Excellence</div>
+            <div class="about-badge-num">&#128106;</div>
+            <div class="about-badge-text">Father &amp; Son<br/>Team</div>
           </div>
         </div>
         <div class="about-content fade-up">
           <div class="title-line"></div>
-          <div class="section-eyebrow">Our Story</div>
-          <h2 class="section-title">Built on Craftsmanship. Driven by Passion.</h2>
+          <div class="section-eyebrow">Meet the Team</div>
+          <h2 class="section-title">Rick &amp; Mike Savo — Built Different.</h2>
+
+          <div class="team-duo">
+            <div class="team-member">
+              <div class="team-avatar">R</div>
+              <div>
+                <strong>Rick Savo</strong>
+                <span>Founder &amp; Master Craftsman</span>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-avatar">M</div>
+              <div>
+                <strong>Mike Savo</strong>
+                <span>Co-Owner &amp; Project Lead</span>
+              </div>
+            </div>
+          </div>
+
           <p class="section-sub">
-            RSC Renos was founded on a simple belief: every homeowner deserves exceptional quality without compromise. For over 15 years, we've been transforming houses into dream homes across the region — one meticulously crafted project at a time.
+            We're a father and son team — and that bond shows in everything we do. With decades of combined experience, RSC Renos was built on a shared passion for craftsmanship and the belief that every homeowner deserves a renovation experience that's personal, stress-free, and exceptional from start to finish.
           </p>
           <br />
           <p class="section-sub">
-            Our team of skilled tradespeople, designers, and project managers brings deep expertise and genuine care to every job. We don't just renovate — we listen, collaborate, and deliver spaces that reflect your unique vision and lifestyle.
+            We serve Barrie, Orillia, Midland, Midhurst, Oro-Medonte, and the surrounding communities — and we take on <strong>one project at a time</strong>. That means your job gets our complete, undivided focus. You'll see the same familiar faces every day, from the very first conversation through to the final walkthrough.
           </p>
+
           <ul class="about-checklist">
-            <li><div class="check-icon">&#10003;</div> Certified Project Managers on every job</li>
-            <li><div class="check-icon">&#10003;</div> Licensed & insured tradespeople throughout</li>
-            <li><div class="check-icon">&#10003;</div> Full permit management — we handle everything</li>
-            <li><div class="check-icon">&#10003;</div> Dedicated client portal for real-time updates</li>
-            <li><div class="check-icon">&#10003;</div> 5-year workmanship warranty, no questions asked</li>
+            <li><div class="check-icon">&#10003;</div> One project at a time — your job is always our top priority</li>
+            <li><div class="check-icon">&#10003;</div> Same trusted faces every day, start to finish</li>
+            <li><div class="check-icon">&#10003;</div> Decades of hands-on trade expertise between us</li>
+            <li><div class="check-icon">&#10003;</div> We treat every home as if it were our own</li>
+            <li><div class="check-icon">&#10003;</div> Fully licensed, insured &amp; committed to quality</li>
           </ul>
           <a href="#contact" class="btn-primary">Start Your Renovation Journey</a>
         </div>
@@ -1902,7 +1938,7 @@
         <a href="#contact" class="btn-primary" style="font-size: 17px; padding: 20px 40px;">
           &#128197; Book Free Consultation
         </a>
-        <a href="tel:+18007272366" class="btn-phone">
+        <a href="tel:+17059852640" class="btn-phone">
           &#128222; Call Us Now
         </a>
       </div>
@@ -1923,7 +1959,7 @@
               <div class="contact-detail-icon">&#128222;</div>
               <div class="contact-detail-text">
                 <strong>Phone</strong>
-                <span>(800) RSC-RENO</span>
+                <span>705-985-2640</span>
               </div>
             </div>
             <div class="contact-detail">
@@ -1980,9 +2016,6 @@
                 <option>Kitchen Renovation</option>
                 <option>Bathroom Remodel</option>
                 <option>Basement Finishing</option>
-                <option>Home Addition</option>
-                <option>Full Home Renovation</option>
-                <option>Outdoor Living Space</option>
                 <option>Other</option>
               </select>
             </div>
@@ -2034,9 +2067,6 @@
           <li><a href="#services">Kitchen Renovations</a></li>
           <li><a href="#services">Bathroom Remodels</a></li>
           <li><a href="#services">Basement Finishing</a></li>
-          <li><a href="#services">Home Additions</a></li>
-          <li><a href="#services">Full Home Renovations</a></li>
-          <li><a href="#services">Outdoor Living</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -2053,7 +2083,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul class="footer-links">
-          <li><a href="tel:+18007272366">(800) RSC-RENO</a></li>
+          <li><a href="tel:+17059852640">705-985-2640</a></li>
           <li><a href="mailto:info@rscrenos.com">info@rscrenos.com</a></li>
           <li><a href="#contact">Free Estimate</a></li>
           <li><a href="#contact">Project Portal</a></li>
