@@ -329,6 +329,8 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 280px 280px; gap: 16px; }
     .gallery-item { overflow: hidden; border-radius: var(--radius); position: relative; background-size: cover; background-position: center; cursor: pointer; }
     .gallery-item:first-child { grid-row: 1 / 3; }
+    .gallery-grid.gallery-2 { grid-template-columns: repeat(2, 1fr); grid-template-rows: 460px; }
+    .gallery-grid.gallery-2 .gallery-item:first-child { grid-row: auto; }
     .gallery-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,13,13,0.85) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 24px; }
     .gallery-item:hover .gallery-item-overlay { opacity: 1; }
     .gallery-item-label { color: var(--white); font-size: 15px; font-weight: 600; font-family: 'Playfair Display', serif; }
@@ -705,21 +707,12 @@
         <h2 class="section-title">Basements We've Brought to Life</h2>
         <p class="section-sub">A glimpse at real basement transformations completed by RSC Renos in Barrie &amp; Simcoe County.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=85')">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Luxury Basement Suite — Collingwood</span></div>
+      <div class="gallery-grid gallery-2">
+        <div class="gallery-item fade-up" style="background-image: url('IMG_0445.jpeg')">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Custom Wet Bar &amp; Fireplace — Barrie</span></div>
         </div>
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=85')">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Open-Concept Rec Room — Orillia</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=85&sat=-10')">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Legal Secondary Suite — Barrie</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=85&sat=10')">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Home Theatre &amp; Wet Bar — Midland</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80')">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Home Gym &amp; Office — Innisfil</span></div>
+        <div class="gallery-item fade-up" style="background-image: url('IMG_0447.jpeg')">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Media Room &amp; Entertainment Space — Orillia</span></div>
         </div>
       </div>
     </div>
