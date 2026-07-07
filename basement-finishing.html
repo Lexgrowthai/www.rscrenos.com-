@@ -315,25 +315,6 @@
     .style-card h4 { font-size: 17px; margin-bottom: 8px; color: var(--dark); }
     .style-card p { font-size: 13.5px; color: #666; line-height: 1.6; }
 
-    /* ─── PRICING ─── */
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
-    .pricing-card { background: var(--white); border-radius: var(--radius); padding: 44px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); border: 1px solid #E8E4DC; position: relative; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
-    .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-    .pricing-card.featured { border: 2px solid var(--gold); box-shadow: var(--shadow); transform: scale(1.045); z-index: 1; }
-    .pricing-card.featured:hover { transform: scale(1.045) translateY(-6px); }
-    .pricing-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: white; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 7px 18px; border-radius: 100px; white-space: nowrap; box-shadow: 0 4px 14px rgba(201,149,42,0.4); }
-    .pricing-name { font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
-    .pricing-range { font-size: 30px; font-weight: 700; color: var(--gold-dark); margin-bottom: 6px; }
-    .pricing-desc { font-size: 13.5px; color: var(--text-muted); margin-bottom: 26px; line-height: 1.5; }
-    .pricing-list { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-bottom: 30px; flex-grow: 1; }
-    .pricing-list li { display: flex; gap: 10px; font-size: 14px; color: #444; align-items: flex-start; line-height: 1.4; }
-    .pricing-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
-    .pricing-cta { display: block; text-align: center; padding: 15px; border-radius: 8px; font-weight: 600; font-size: 14.5px; text-decoration: none; transition: opacity 0.2s, transform .2s; }
-    .pricing-card:not(.featured) .pricing-cta { background: var(--light-gray); color: var(--dark); }
-    .pricing-card.featured .pricing-cta { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: white; box-shadow: 0 8px 24px rgba(201,149,42,0.35); }
-    .pricing-cta:hover { opacity: 0.85; transform: translateY(-2px); }
-    .pricing-note { text-align: center; font-size: 13.5px; color: var(--text-muted); margin-top: 36px; }
-
     /* ─── PROCESS ─── */
     .process-header .section-title { color: var(--white); }
     .process-header .section-sub { color: rgba(255,255,255,0.6); }
@@ -437,9 +418,6 @@
     @media (max-width: 1024px) {
       .features-grid { grid-template-columns: repeat(2, 1fr); }
       .style-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-      .pricing-card.featured { transform: none; }
-      .pricing-card.featured:hover { transform: translateY(-6px); }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-img-wrap { display: none; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -684,63 +662,6 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="section light-gray-bg" id="investment">
-    <div class="section-inner">
-      <div class="section-header center fade-up">
-        <div class="title-line"></div>
-        <div class="section-eyebrow">Investment</div>
-        <h2 class="section-title">Basement Finishing Packages</h2>
-        <p class="section-sub">Every project is custom-quoted after a free in-home consultation — these ranges reflect typical scope and finishes for Barrie &amp; Simcoe County homes.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card fade-up">
-          <div class="pricing-name">Essential Finish</div>
-          <div class="pricing-range">$25K – $40K</div>
-          <p class="pricing-desc">A straightforward finish for a functional, comfortable living space.</p>
-          <ul class="pricing-list">
-            <li>Framing, insulation &amp; drywall</li>
-            <li>Basic waterproofing &amp; moisture barrier</li>
-            <li>Laminate or vinyl flooring</li>
-            <li>Pot lighting &amp; electrical</li>
-            <li>Paint &amp; trim finishing</li>
-          </ul>
-          <a href="#contact" class="pricing-cta">Get This Estimate</a>
-        </div>
-        <div class="pricing-card featured fade-up">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-name">Signature Living Space</div>
-          <div class="pricing-range">$40K – $70K</div>
-          <p class="pricing-desc">Our most common full basement renovation — a complete finished space.</p>
-          <ul class="pricing-list">
-            <li>Full waterproofing &amp; sump integration</li>
-            <li>Egress window installation</li>
-            <li>Custom wet bar or kitchenette</li>
-            <li>Bathroom rough-in &amp; finishing</li>
-            <li>Home theatre pre-wiring</li>
-            <li>Radiant floor heating option</li>
-          </ul>
-          <a href="#contact" class="pricing-cta">Get This Estimate</a>
-        </div>
-        <div class="pricing-card fade-up">
-          <div class="pricing-name">Legal Secondary Suite</div>
-          <div class="pricing-range">$70K+</div>
-          <p class="pricing-desc">For homeowners building a fully code-compliant rental or in-law suite.</p>
-          <ul class="pricing-list">
-            <li>Separate entrance &amp; egress</li>
-            <li>Full kitchen &amp; bathroom</li>
-            <li>Fire separation &amp; sound dampening</li>
-            <li>Independent HVAC &amp; electrical</li>
-            <li>Full permit &amp; inspection management</li>
-            <li>Rental-ready finishes</li>
-          </ul>
-          <a href="#contact" class="pricing-cta">Get This Estimate</a>
-        </div>
-      </div>
-      <p class="pricing-note">Final pricing depends on basement size, ceiling height, and scope of work. Book a free consultation for an exact quote.</p>
-    </div>
-  </section>
-
   <!-- PROCESS -->
   <section class="section dark-bg" id="process">
     <div class="section-inner">
@@ -920,16 +841,6 @@
                 <option>Bathroom Remodel</option>
                 <option selected>Basement Finishing</option>
                 <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="budget">Estimated Budget</label>
-              <select id="budget" name="budget">
-                <option value="">Select a budget range...</option>
-                <option>Under $25,000</option>
-                <option>$25,000 – $40,000</option>
-                <option>$40,000 – $70,000</option>
-                <option>$70,000+</option>
               </select>
             </div>
             <div class="form-group">
