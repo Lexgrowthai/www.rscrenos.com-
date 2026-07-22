@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RSC Renos | Premium Home Renovation & Remodeling | Transform Your Space</title>
-  <meta name="description" content="RSC Renos delivers luxury home renovations, kitchen remodels, bathroom upgrades, basement finishing, and custom additions in Barrie and across Simcoe County. Trusted by 500+ homeowners. Licensed, insured & award-winning. Get your free estimate today." />
-  <meta name="keywords" content="home renovation Barrie, kitchen remodel Barrie, bathroom renovation Simcoe County, basement finishing Barrie ON, home addition Orillia, general contractor Barrie, RSC Renos, renovation Collingwood, renovation Innisfil, renovation Midland, Simcoe County contractor, luxury renovation Barrie" />
+  <meta name="description" content="RSC Renos delivers high-end home renovations, kitchen remodels, bathroom upgrades, basement finishing, and custom additions serving Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, & Springwater. Trusted by 700+ homeowners. A local, family-run team, licensed and insured. Get your free estimate today." />
+  <meta name="keywords" content="home renovation Barrie, kitchen remodel Barrie, bathroom renovation Orillia, basement finishing Barrie ON, home addition Orillia, general contractor Barrie, RSC Renos, renovation Midland, renovation Springwater, renovation Oro-Medonte, luxury renovation Barrie" />
   <meta name="author" content="RSC Renos" />
   <meta property="og:title" content="RSC Renos | Premium Home Renovation & Remodeling" />
-  <meta property="og:description" content="Transform your home with RSC Renos — trusted, licensed, and award-winning renovation experts with 15+ years of excellence." />
+  <meta property="og:description" content="Transform your home with RSC Renos — a trusted, licensed, family-run renovation team with 15+ years of experience." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rscrenos.com/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" />
@@ -23,17 +23,12 @@
     "name": "RSC Renos",
     "url": "https://www.rscrenos.com",
     "telephone": "+17059852640",
-    "description": "RSC Renos is a father and son renovation company (Rick and Mike Savo) specializing in kitchens, bathrooms, and basement finishing in Barrie and across Simcoe County.",
+    "description": "RSC Renos is a father and son renovation company (Rick and Mike Savo) specializing in kitchens, bathrooms, and basement finishing serving Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, and Springwater.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Barrie",
       "addressRegion": "ON",
       "addressCountry": "CA"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "347"
     },
     "sameAs": [
       "https://www.facebook.com/rscrenos",
@@ -158,6 +153,66 @@
     }
 
     .nav-cta:hover { opacity: 0.9; }
+
+    .nav-dropdown { position: relative; }
+
+    .nav-dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .nav-caret {
+      display: inline-block;
+      font-size: 10px;
+      transition: transform 0.2s;
+      color: var(--gold);
+    }
+
+    .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      min-width: 230px;
+      list-style: none;
+      background: rgba(13,13,13,0.98);
+      border: 1px solid rgba(201,149,42,0.18);
+      border-radius: 10px;
+      padding: 8px;
+      margin-top: 12px;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      z-index: 1001;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .nav-dropdown-menu li { list-style: none; }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 11px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .nav-dropdown-menu a:hover,
+    .nav-dropdown-menu a.active { background: rgba(201,149,42,0.14); color: var(--gold-light); }
 
     /* ─── HERO ─── */
     .hero {
@@ -383,64 +438,6 @@
       flex-shrink: 0;
     }
 
-    /* ─── AWARDS STRIP ─── */
-    .awards-strip {
-      background: var(--light-gray);
-      padding: 40px 0;
-      border-top: 1px solid #E8E4DC;
-      border-bottom: 1px solid #E8E4DC;
-    }
-
-    .awards-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 48px;
-    }
-
-    .awards-label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .awards-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 56px;
-      flex-wrap: wrap;
-    }
-
-    .award-badge {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    .award-badge:hover { opacity: 1; }
-
-    .award-badge-icon {
-      width: 52px; height: 52px;
-      background: var(--dark);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-    }
-
-    .award-badge-name {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--mid);
-      letter-spacing: 0.5px;
-      text-align: center;
-    }
 
     /* ─── SECTION HELPERS ─── */
     .section { padding: var(--section-pad); }
@@ -493,6 +490,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
+
+    .services-grid.areas-grid { grid-template-columns: repeat(4, 1fr); }
 
     .service-card {
       background: var(--white);
@@ -711,7 +710,7 @@
 
     .process-steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
       position: relative;
     }
@@ -774,10 +773,6 @@
       background-size: cover;
       background-position: center;
       cursor: pointer;
-    }
-
-    .gallery-item:first-child {
-      grid-row: 1 / 3;
     }
 
     .gallery-item-overlay {
@@ -1265,8 +1260,8 @@
       margin: 0 auto;
       padding: 0 48px;
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
     }
 
     .footer-brand p {
@@ -1398,6 +1393,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid.areas-grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-img-wrap { display: none; }
       .why-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1408,6 +1404,27 @@
     @media (max-width: 768px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
+      .nav-dropdown { display: flex; flex-direction: column; align-items: center; width: 100%; }
+      .nav-dropdown-trigger { justify-content: center; }
+      .nav-dropdown-menu,
+      .nav-dropdown:hover .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 4px 0 0;
+        margin: 6px 0 0;
+        display: none;
+        text-align: center;
+      }
+      .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
+      .nav-dropdown-menu a { color: rgba(255,255,255,0.6); padding: 8px 0; white-space: normal; }
       .hamburger { display: flex; }
       .hero-content { padding: 100px 24px 48px; }
       .hero-stats { gap: 24px; }
@@ -1415,17 +1432,16 @@
       .section-inner { padding: 0 24px; }
       .section { padding: 64px 0; }
       .services-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .services-grid.areas-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
       .process-steps::before { display: none; }
       .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .gallery-item:first-child { grid-row: auto; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .team-duo { flex-direction: column; }
       .footer-inner { grid-template-columns: 1fr; }
       .trust-bar-inner { justify-content: center; }
-      .awards-logos { gap: 28px; }
       .cta-inner { text-align: center; justify-content: center; }
       .cta-text p { margin: 0 auto; }
       .hero-stats { flex-wrap: wrap; }
@@ -1466,7 +1482,23 @@
     </a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
+      <li class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-trigger">Services <span class="nav-caret">&#9662;</span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="kitchen-renovations.html">Kitchen Renovations</a></li>
+          <li><a href="bathroom-renovations.html">Bathroom Remodels</a></li>
+          <li><a href="basement-finishing.html">Basement Finishing</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="#areas" class="nav-dropdown-trigger">Areas <span class="nav-caret">&#9662;</span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="orillia.html">Orillia, ON</a></li>
+          <li><a href="midland.html">Midland, ON</a></li>
+          <li><a href="oro-medonte.html">Oro-Medonte, ON</a></li>
+          <li><a href="springwater.html">Springwater, ON</a></li>
+        </ul>
+      </li>
       <li><a href="#about">About</a></li>
       <li><a href="#gallery">Portfolio</a></li>
       <li><a href="#testimonials">Reviews</a></li>
@@ -1484,14 +1516,14 @@
     <div class="hero-content">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        <span>Barrie &bull; Simcoe County &bull; 500+ Homes Transformed</span>
+        <span>Barrie &bull; Orillia &bull; Midland &bull; 700+ Homes Renovated</span>
       </div>
       <h1>
         Elevate Your Home.<br />
         <em>Exceed Your Vision.</em>
       </h1>
       <p class="hero-sub">
-        RSC Renos delivers world-class renovations across Barrie and all of Simcoe County — from stunning kitchen makeovers to complete home transformations. Licensed, insured, and obsessed with quality.
+        RSC Renos delivers high-end, quality renovations serving Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, &amp; Springwater — from stunning kitchen makeovers to complete home transformations. A local father-and-son team, licensed, insured, and obsessed with quality.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">
@@ -1503,8 +1535,8 @@
       </div>
       <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-num" data-count="500">0</span>
-        <span class="hero-stat-label">Projects Completed</span>
+        <span class="hero-stat-num" data-count="700">0</span>
+        <span class="hero-stat-label">Homes Renovated</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
@@ -1513,13 +1545,8 @@
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <span class="hero-stat-num" data-suffix="%" data-count="100">0</span>
-        <span class="hero-stat-label">Client Satisfaction</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num" data-count="47">0</span>
-        <span class="hero-stat-label">Industry Awards</span>
+        <span class="hero-stat-num">Family</span>
+        <span class="hero-stat-label">Owned &amp; Operated</span>
       </div>
     </div><!-- /hero-stats -->
     </div><!-- /hero-content -->
@@ -1542,8 +1569,8 @@
         <span>On-Time Project Completion</span>
       </div>
       <div class="trust-item">
-        <div class="trust-icon">&#128272;</div>
-        <span>5-Year Workmanship Warranty</span>
+        <div class="trust-icon">&#128101;</div>
+        <span>Family Owned &amp; Operated</span>
       </div>
       <div class="trust-item">
         <div class="trust-icon">&#128176;</div>
@@ -1552,38 +1579,6 @@
     </div>
   </div>
 
-  <!-- AWARDS STRIP -->
-  <div class="awards-strip">
-    <div class="awards-inner">
-      <div class="awards-label">Recognized &amp; Certified By</div>
-      <div class="awards-logos">
-        <div class="award-badge">
-          <div class="award-badge-icon">&#127942;</div>
-          <div class="award-badge-name">Best of Houzz<br/>2022 &amp; 2023</div>
-        </div>
-        <div class="award-badge">
-          <div class="award-badge-icon">&#127979;</div>
-          <div class="award-badge-name">BBB A+<br/>Accredited</div>
-        </div>
-        <div class="award-badge">
-          <div class="award-badge-icon">&#128081;</div>
-          <div class="award-badge-name">RENOMARK&#8482;<br/>Certified</div>
-        </div>
-        <div class="award-badge">
-          <div class="award-badge-icon">&#128218;</div>
-          <div class="award-badge-name">CHBA<br/>Member</div>
-        </div>
-        <div class="award-badge">
-          <div class="award-badge-icon">&#9889;</div>
-          <div class="award-badge-name">Green Building<br/>Certified</div>
-        </div>
-        <div class="award-badge">
-          <div class="award-badge-icon">&#128736;</div>
-          <div class="award-badge-name">Tarion<br/>Warrantor</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- SERVICES -->
   <section class="section services-bg" id="services">
@@ -1596,12 +1591,12 @@
       </div>
       <div class="services-grid">
         <div class="service-card fade-up">
-          <div class="service-card-img-placeholder" style="background-image: url('kitchen.jpeg')"></div>
+          <div class="service-card-img-placeholder" style="background-image: url('kitchen-2.png')"></div>
           <div class="service-card-body">
             <div class="service-card-icon">&#127860;</div>
             <h3>Kitchen Renovations</h3>
-            <p>Custom cabinetry, stone countertops, chef-grade appliances, and perfect lighting — we create kitchens that become the heart of your home.</p>
-            <a href="#contact" class="service-link">Explore Kitchens &#8594;</a>
+            <p>Custom cabinetry, quartz countertops, quality appliances, and perfect lighting — we create kitchens that become the heart of your home.</p>
+            <a href="kitchen-renovations.html" class="service-link">Explore Kitchens &#8594;</a>
           </div>
         </div>
         <div class="service-card fade-up">
@@ -1610,16 +1605,66 @@
             <div class="service-card-icon">&#128704;</div>
             <h3>Bathroom Remodels</h3>
             <p>Spa-inspired retreats with heated floors, walk-in showers, soaker tubs, and custom tile work. Your personal sanctuary awaits.</p>
-            <a href="#contact" class="service-link">Explore Bathrooms &#8594;</a>
+            <a href="bathroom-renovations.html" class="service-link">Explore Bathrooms &#8594;</a>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card-img-placeholder" style="background-image: url('IMG_0445.jpeg')"></div>
+          <div class="service-card-body">
+            <div class="service-card-icon">&#127968;</div>
+            <h3>Basement Finishing</h3>
+            <p>Transform unused space into a stunning entertainment room, home gym, rec room, or office — finished to the highest standard.</p>
+            <a href="basement-finishing.html" class="service-link">Explore Basements &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="section" id="areas">
+    <div class="section-inner">
+      <div class="services-header fade-up">
+        <div class="title-line"></div>
+        <div class="section-eyebrow">Where We Work</div>
+        <h2 class="section-title">Proudly Serving Barrie &amp; Beyond</h2>
+        <p class="section-sub">We take on one project at a time across the region — bringing the same craftsmanship and attention to every community we serve.</p>
+      </div>
+      <div class="services-grid areas-grid">
+        <div class="service-card fade-up">
+          <div class="service-card-img-placeholder" style="background-image: url('IMG_0447.jpeg')"></div>
+          <div class="service-card-body">
+            <div class="service-card-icon">&#127774;</div>
+            <h3>Orillia, ON</h3>
+            <p>Waterfront homes, lakeside cottages, and downtown character homes across Lake Couchiching and Lake Simcoe.</p>
+            <a href="orillia.html" class="service-link">Explore Orillia &#8594;</a>
           </div>
         </div>
         <div class="service-card fade-up">
           <div class="service-card-img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80')"></div>
           <div class="service-card-body">
-            <div class="service-card-icon">&#127968;</div>
-            <h3>Basement Finishing</h3>
-            <p>Transform unused space into a stunning entertainment room, home gym, legal suite, or office — fully permitted and built to code.</p>
-            <a href="#contact" class="service-link">Explore Basements &#8594;</a>
+            <div class="service-card-icon">&#9875;</div>
+            <h3>Midland, ON</h3>
+            <p>From historic downtown Midland to Georgian Bay waterfront properties, built with quality, hands-on craftsmanship.</p>
+            <a href="midland.html" class="service-link">Explore Midland &#8594;</a>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card-img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80')"></div>
+          <div class="service-card-body">
+            <div class="service-card-icon">&#9968;</div>
+            <h3>Oro-Medonte, ON</h3>
+            <p>Estate homes, rural properties, and Horseshoe Valley residences renovated with the same premium standard.</p>
+            <a href="oro-medonte.html" class="service-link">Explore Oro-Medonte &#8594;</a>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card-img-placeholder" style="background-image: url('kitchen_4658-768x1024.jpeg')"></div>
+          <div class="service-card-body">
+            <div class="service-card-icon">&#127795;</div>
+            <h3>Springwater, ON</h3>
+            <p>Serving Midhurst, Elmvale, Minesing, and the surrounding Springwater community with premium renovations.</p>
+            <a href="springwater.html" class="service-link">Explore Springwater &#8594;</a>
           </div>
         </div>
       </div>
@@ -1631,8 +1676,8 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-img-wrap">
-          <div class="about-img-main" style="background-image: url('kitchen_4658-768x1024.jpeg')"></div>
-          <div class="about-img-accent" style="background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80')"></div>
+          <div class="about-img-main" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=90')"></div>
+          <div class="about-img-accent" style="background-image: url('kitchen-2.png')"></div>
           <div class="about-badge">
             <div class="about-badge-num">&#128106;</div>
             <div class="about-badge-text">Father &amp; Son<br/>Team</div>
@@ -1688,7 +1733,7 @@
         <div class="title-line"></div>
         <div class="section-eyebrow" style="color: var(--gold)">How It Works</div>
         <h2 class="section-title">A Seamless Experience from Start to Finish</h2>
-        <p class="section-sub">We've perfected a 4-step process that keeps you informed, on budget, and stress-free throughout your renovation.</p>
+        <p class="section-sub">We've perfected a 3-step process that keeps you informed, on budget, and stress-free throughout your renovation.</p>
       </div>
       <div class="process-steps">
         <div class="process-step fade-up">
@@ -1706,11 +1751,6 @@
           <h3>Expert Build</h3>
           <p>Our certified team gets to work with precision and care. Daily updates keep you in the loop every step of the way.</p>
         </div>
-        <div class="process-step fade-up">
-          <div class="process-step-num">04</div>
-          <h3>Final Walkthrough</h3>
-          <p>We inspect every detail together. You don't sign off until everything is exactly right. Then we hand you the keys.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -1727,14 +1767,14 @@
         <p class="section-sub">Real homes. Real results. Browse our recent renovations and envision what's possible for your space.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item fade-up" style="background-image: url('kitchen.jpeg')">
+        <div class="gallery-item fade-up" style="background-image: url('kitchen-2.png')">
           <div class="gallery-item-overlay">
             <span class="gallery-item-label">Modern Kitchen Transformation — Barrie</span>
           </div>
         </div>
         <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80')">
           <div class="gallery-item-overlay">
-            <span class="gallery-item-label">Spa Master Bathroom — Innisfil</span>
+            <span class="gallery-item-label">Spa Master Bathroom — Severn</span>
           </div>
         </div>
         <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80')">
@@ -1744,12 +1784,12 @@
         </div>
         <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80')">
           <div class="gallery-item-overlay">
-            <span class="gallery-item-label">Luxury Basement Suite — Collingwood</span>
+            <span class="gallery-item-label">Luxury Basement Suite — Midland</span>
           </div>
         </div>
-        <div class="gallery-item fade-up" style="background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80')">
+        <div class="gallery-item fade-up" style="background-image: url('kitchen_4658-768x1024.jpeg')">
           <div class="gallery-item-overlay">
-            <span class="gallery-item-label">Custom Home Addition — Midland</span>
+            <span class="gallery-item-label">Custom Kitchen Remodel — Midhurst</span>
           </div>
         </div>
       </div>
@@ -1788,7 +1828,7 @@
             <div class="testimonial-avatar">D</div>
             <div>
               <div class="testimonial-name">David &amp; Lisa R.</div>
-              <div class="testimonial-loc">Innisfil, ON — Basement Suite</div>
+              <div class="testimonial-loc">Severn, ON — Basement Suite</div>
             </div>
           </div>
         </div>
@@ -1814,7 +1854,7 @@
             <div class="testimonial-avatar">A</div>
             <div>
               <div class="testimonial-name">Amanda K.</div>
-              <div class="testimonial-loc">Collingwood, ON — Bathroom Remodel</div>
+              <div class="testimonial-loc">Midland, ON — Bathroom Remodel</div>
             </div>
           </div>
         </div>
@@ -1822,7 +1862,7 @@
           <div class="testimonial-stars">
             <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
           </div>
-          <p class="testimonial-text">"I've worked with other contractors before — none compare to RSC. Their project management is world-class. Daily updates, zero surprises, pristine clean-up every day. The home addition looks like it was always there."</p>
+          <p class="testimonial-text">"I've worked with other contractors before — none compare to RSC. Their project management is top-notch. Daily updates, zero surprises, pristine clean-up every day. The home addition looks like it was always there."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">M</div>
             <div>
@@ -1840,7 +1880,7 @@
             <div class="testimonial-avatar">C</div>
             <div>
               <div class="testimonial-name">Carol &amp; Tom W.</div>
-              <div class="testimonial-loc">Wasaga Beach, ON — Full Renovation</div>
+              <div class="testimonial-loc">Severn, ON — Full Renovation</div>
             </div>
           </div>
         </div>
@@ -1852,25 +1892,7 @@
           <div class="rating-stars">
             <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
           </div>
-          <div class="rating-count">214 reviews</div>
-        </div>
-        <div class="rating-divider"></div>
-        <div class="rating-platform">
-          <div class="rating-platform-name">Houzz</div>
-          <div class="rating-score">5.0</div>
-          <div class="rating-stars">
-            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
-          </div>
-          <div class="rating-count">89 reviews</div>
-        </div>
-        <div class="rating-divider"></div>
-        <div class="rating-platform">
-          <div class="rating-platform-name">HomeStars</div>
-          <div class="rating-score">9.8</div>
-          <div class="rating-stars">
-            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
-          </div>
-          <div class="rating-count">44 reviews</div>
+          <div class="rating-count">5-Star Google Rating</div>
         </div>
         <div class="rating-divider"></div>
         <div class="rating-platform">
@@ -1890,7 +1912,7 @@
         <div class="fade-up">
           <div class="title-line"></div>
           <div class="section-eyebrow">Why RSC Renos</div>
-          <h2 class="section-title">The Standard Others Aspire To</h2>
+          <h2 class="section-title">Honest Work. Personal Service.</h2>
           <p class="section-sub" style="margin-bottom: 40px;">We don't cut corners. We don't make excuses. We deliver the renovation experience you deserve — from first call to final reveal.</p>
           <div class="why-features">
             <div class="why-feature">
@@ -1904,14 +1926,14 @@
               <p>We source only top-tier materials from trusted suppliers. Quality you can see and feel.</p>
             </div>
             <div class="why-feature">
-              <div class="why-feature-icon">&#128203;</div>
-              <h4>Permit Experts</h4>
-              <p>We handle all permits and inspections. Your renovation is fully code-compliant.</p>
+              <div class="why-feature-icon">&#128172;</div>
+              <h4>Direct Communication</h4>
+              <p>You deal directly with Rick and Mike — no call centers, no middlemen.</p>
             </div>
             <div class="why-feature">
               <div class="why-feature-icon">&#128241;</div>
-              <h4>Live Project Updates</h4>
-              <p>Our client portal gives you real-time photos, progress reports, and direct team access.</p>
+              <h4>Regular Project Updates</h4>
+              <p>Photos, progress updates, and direct access to our team throughout your project.</p>
             </div>
             <div class="why-feature">
               <div class="why-feature-icon">&#127968;</div>
@@ -1919,18 +1941,18 @@
               <p>Daily clean-up, dust barriers, and floor protection. We treat your home like our own.</p>
             </div>
             <div class="why-feature">
-              <div class="why-feature-icon">&#128274;</div>
-              <h4>5-Year Warranty</h4>
-              <p>We stand behind our work with a comprehensive 5-year workmanship warranty.</p>
+              <div class="why-feature-icon">&#128101;</div>
+              <h4>One Job at a Time</h4>
+              <p>We focus on a single project at a time, so yours always gets our full attention.</p>
             </div>
           </div>
         </div>
         <div class="why-img fade-up" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80')">
           <div class="why-img-card">
-            <div class="why-img-card-icon">&#127942;</div>
+            <div class="why-img-card-icon">&#128101;</div>
             <div class="why-img-card-text">
-              <strong>Award-Winning Renovations</strong>
-              <span>Best Contractor — Houzz 2022 &amp; 2023</span>
+              <strong>A Local Family Business</strong>
+              <span>Trusted by Homeowners Across the Region</span>
             </div>
           </div>
         </div>
@@ -1984,7 +2006,7 @@
               <div class="contact-detail-icon">&#128205;</div>
               <div class="contact-detail-text">
                 <strong>Service Area</strong>
-                <span>Barrie &amp; All of Simcoe County</span>
+                <span>Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland &amp; Springwater</span>
               </div>
             </div>
             <div class="contact-detail">
@@ -2031,17 +2053,6 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="budget">Estimated Budget</label>
-              <select id="budget" name="budget">
-                <option value="">Select a budget range...</option>
-                <option>Under $25,000</option>
-                <option>$25,000 – $50,000</option>
-                <option>$50,000 – $100,000</option>
-                <option>$100,000 – $250,000</option>
-                <option>$250,000+</option>
-              </select>
-            </div>
-            <div class="form-group">
               <label for="message">Tell Us About Your Project</label>
               <textarea id="message" name="message" placeholder="Describe your vision, current situation, and any key details..."></textarea>
             </div>
@@ -2064,20 +2075,28 @@
             <span class="nav-logo-sub">Premium Renovations</span>
           </div>
         </a>
-        <p>Proudly based in Barrie and serving all of Simcoe County — including Innisfil, Orillia, Collingwood, Midland, Wasaga Beach, and beyond. Exceptional craftsmanship, trusted expertise, and a passion for quality that shows in every detail.</p>
+        <p>Proudly based in Barrie, serving Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, &amp; Springwater. Exceptional craftsmanship, trusted expertise, and a passion for quality that shows in every detail.</p>
         <div class="footer-socials">
           <a href="#" class="social-btn" aria-label="Facebook">&#128101;</a>
           <a href="#" class="social-btn" aria-label="Instagram">&#128247;</a>
-          <a href="#" class="social-btn" aria-label="Houzz">&#127968;</a>
           <a href="#" class="social-btn" aria-label="YouTube">&#127897;</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="#services">Kitchen Renovations</a></li>
-          <li><a href="#services">Bathroom Remodels</a></li>
-          <li><a href="#services">Basement Finishing</a></li>
+          <li><a href="kitchen-renovations.html">Kitchen Renovations</a></li>
+          <li><a href="bathroom-renovations.html">Bathroom Remodels</a></li>
+          <li><a href="basement-finishing.html">Basement Finishing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="orillia.html">Orillia, ON</a></li>
+          <li><a href="midland.html">Midland, ON</a></li>
+          <li><a href="oro-medonte.html">Oro-Medonte, ON</a></li>
+          <li><a href="springwater.html">Springwater, ON</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -2097,8 +2116,8 @@
           <li><a href="tel:+17059852640">705-985-2640</a></li>
           <li><a href="mailto:info@rscrenos.com">info@rscrenos.com</a></li>
           <li><a href="#contact">Free Estimate</a></li>
-          <li><a href="#contact">Project Portal</a></li>
-          <li><a href="#contact">Warranty Claims</a></li>
+          <li><a href="#contact">Book a Consultation</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
         </ul>
       </div>
     </div>
@@ -2197,10 +2216,19 @@
     }
 
     // Close mobile menu on link click
-    document.querySelectorAll('.nav-links a').forEach(function(a) {
+    document.querySelectorAll('.nav-links a:not(.nav-dropdown-trigger)').forEach(function(a) {
       a.addEventListener('click', function() {
         const nav = document.querySelector('.nav-links');
         nav.style.display = 'none';
+      });
+    });
+
+    document.querySelectorAll('.nav-dropdown-trigger').forEach(function(trigger) {
+      trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          trigger.parentElement.classList.toggle('mobile-open');
+        }
       });
     });
 
