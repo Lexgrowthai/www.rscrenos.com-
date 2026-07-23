@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bathroom Renovations Barrie | Spa Bathroom Remodeling | RSC Renos</title>
-  <meta name="description" content="Spa-inspired bathroom renovations serving Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, and Springwater. Walk-in showers, heated floors, custom tile, and soaker tubs from RSC Renos — a local family business, 700+ homes renovated. Free in-home estimate." />
+  <title>Bathroom Renovations Barrie | Spa Bathroom Remodeling | RSC Renovations</title>
+  <meta name="description" content="Spa-inspired bathroom renovations serving Barrie, Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, and Springwater. Walk-in showers, heated floors, custom tile, and soaker tubs from RSC Renovations — a local family business, 700+ homes renovated. Free in-home estimate." />
   <meta name="keywords" content="bathroom renovation Barrie, bathroom remodel Orillia, walk-in shower Barrie, heated floor bathroom, luxury bathroom contractor, ensuite renovation Barrie ON" />
-  <meta name="author" content="RSC Renos" />
-  <meta property="og:title" content="Bathroom Renovations | RSC Renos" />
+  <meta name="author" content="RSC Renovations" />
+  <meta property="og:title" content="Bathroom Renovations | RSC Renovations" />
   <meta property="og:description" content="Spa-inspired bathroom remodels built around you. Licensed, insured, and family-run in Barrie and across the region." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rscrenos.com/bathroom-renovations.html" />
@@ -22,7 +22,7 @@
     "serviceType": "Bathroom Renovation",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
-      "name": "RSC Renos",
+      "name": "RSC Renovations",
       "telephone": "+17059852640",
       "address": { "@type": "PostalAddress", "addressLocality": "Barrie", "addressRegion": "ON", "addressCountry": "CA" }
     },
@@ -331,6 +331,42 @@
     .gallery-item:first-child { grid-row: 1 / 3; }
     .gallery-grid.gallery-3 { grid-template-rows: 460px; }
     .gallery-grid.gallery-3 .gallery-item:first-child { grid-row: auto; }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(13,13,13,0.94);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+      cursor: default;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 28px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.18); }
     .gallery-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,13,13,0.85) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 24px; }
     .gallery-item:hover .gallery-item-overlay { opacity: 1; }
     .gallery-item-label { color: var(--white); font-size: 15px; font-weight: 600; font-family: 'Playfair Display', serif; }
@@ -490,7 +526,7 @@
   <nav>
     <a href="index.html#home" class="nav-logo">
       <div class="nav-logo-badge">R</div>
-      <div class="nav-logo-text"><span class="nav-logo-name">RSC Renos</span><span class="nav-logo-sub">Premium Renovations</span></div>
+      <div class="nav-logo-text"><span class="nav-logo-name">RSC Renovations</span></div>
     </a>
     <ul class="nav-links">
       <li><a href="index.html#home">Home</a></li>
@@ -505,6 +541,8 @@
       <li class="nav-dropdown">
         <a href="index.html#areas" class="nav-dropdown-trigger">Areas <span class="nav-caret">&#9662;</span></a>
         <ul class="nav-dropdown-menu">
+          <li><a href="index.html#areas">Barrie, ON</a></li>
+          <li><a href="index.html#areas">Severn, ON</a></li>
           <li><a href="orillia.html">Orillia, ON</a></li>
           <li><a href="midland.html">Midland, ON</a></li>
           <li><a href="oro-medonte.html">Oro-Medonte, ON</a></li>
@@ -533,7 +571,7 @@
       </div>
       <h1>Spa-Inspired Bathrooms <em>Built Around You.</em></h1>
       <p class="hero-sub">
-        Heated floors, walk-in showers, soaker tubs, and custom tile work — RSC Renos transforms tired bathrooms into personal sanctuaries, built to last.
+        Heated floors, walk-in showers, soaker tubs, and custom tile work — RSC Renovations transforms tired bathrooms into personal sanctuaries, built to last.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">&#128197; Get Your Free Estimate</a>
@@ -738,7 +776,7 @@
         <div class="title-line"></div>
         <div class="section-eyebrow">Recent Work</div>
         <h2 class="section-title">Bathrooms We've Brought to Life</h2>
-        <p class="section-sub">A glimpse at real bathroom transformations completed by RSC Renos across our service area.</p>
+        <p class="section-sub">A glimpse at real bathroom transformations completed by RSC Renovations across our service area.</p>
       </div>
       <div class="gallery-grid gallery-3">
         <div class="gallery-item fade-up" style="background-image: url('IMG_6880.jpeg')">
@@ -761,7 +799,7 @@
         <div class="title-line"></div>
         <div class="section-eyebrow">Client Reviews</div>
         <h2 class="section-title">What Bathroom Clients Are Saying</h2>
-        <p class="section-sub">Real feedback from homeowners who trusted RSC Renos with their bathroom renovation.</p>
+        <p class="section-sub">Real feedback from homeowners who trusted RSC Renovations with their bathroom renovation.</p>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card fade-up">
@@ -811,10 +849,6 @@
         <details class="faq-item fade-up">
           <summary>Do you offer aging-in-place or accessible bathroom designs?</summary>
           <p>Yes — curbless showers, grab bar blocking, comfort-height vanities, and non-slip flooring can all be built in from the start, so your bathroom stays functional and beautiful as your needs change.</p>
-        </details>
-        <details class="faq-item fade-up">
-          <summary>Do I need a permit for a bathroom renovation?</summary>
-          <p>Permits are typically required when plumbing is relocated or electrical work is added. RSC Renos handles all permit applications and inspections so your renovation is fully code-compliant.</p>
         </details>
       </div>
     </div>
@@ -890,7 +924,7 @@
       <div class="footer-brand">
         <a href="index.html#home" class="nav-logo" style="display: inline-flex;">
           <div class="nav-logo-badge">R</div>
-          <div class="nav-logo-text"><span class="nav-logo-name">RSC Renos</span><span class="nav-logo-sub">Premium Renovations</span></div>
+          <div class="nav-logo-text"><span class="nav-logo-name">RSC Renovations</span></div>
         </a>
         <p>Proudly based in Barrie, serving Orillia, Severn, Midhurst, Oro-Medonte, Horseshoe Valley, Midland, &amp; Springwater. Exceptional craftsmanship, trusted expertise, and a passion for quality that shows in every detail.</p>
         <div class="footer-socials">
@@ -910,6 +944,8 @@
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul class="footer-links">
+          <li><a href="index.html#areas">Barrie, ON</a></li>
+          <li><a href="index.html#areas">Severn, ON</a></li>
           <li><a href="orillia.html">Orillia, ON</a></li>
           <li><a href="midland.html">Midland, ON</a></li>
           <li><a href="oro-medonte.html">Oro-Medonte, ON</a></li>
@@ -919,7 +955,7 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="index.html#about">About RSC Renos</a></li>
+          <li><a href="index.html#about">About RSC Renovations</a></li>
           <li><a href="index.html#process">Our Process</a></li>
           <li><a href="index.html#gallery">Portfolio</a></li>
           <li><a href="index.html#testimonials">Reviews</a></li>
@@ -939,7 +975,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 RSC Renos. All rights reserved. Licensed &amp; Insured.</p>
+      <p>&copy; 2024 RSC Renovations. All rights reserved. Licensed &amp; Insured.</p>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -950,6 +986,12 @@
 
   <!-- SCROLL TO TOP -->
   <a href="#home" class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8679;</a>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#10005;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
 
   <script>
     window.addEventListener('load', function() {
@@ -1013,6 +1055,33 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       });
     });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(bgImage, label) {
+      const match = bgImage.match(/url\(["']?(.*?)["']?\)/);
+      if (!match) return;
+      lightboxImg.src = match[1];
+      lightboxImg.alt = label || '';
+      lightbox.classList.add('open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+        const label = item.querySelector('.gallery-item-label');
+        openLightbox(item.style.backgroundImage, label ? label.textContent : '');
+      });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
   </script>
 </body>
 </html>
