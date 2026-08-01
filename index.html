@@ -2224,8 +2224,10 @@
     // Close mobile menu on link click
     document.querySelectorAll('.nav-links a:not(.nav-dropdown-trigger)').forEach(function(a) {
       a.addEventListener('click', function() {
-        const nav = document.querySelector('.nav-links');
-        nav.style.display = 'none';
+        if (window.innerWidth <= 768) {
+          const nav = document.querySelector('.nav-links');
+          nav.style.display = 'none';
+        }
       });
     });
 
