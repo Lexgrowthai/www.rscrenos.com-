@@ -2023,6 +2023,10 @@
           <h3>Request Your Free Estimate</h3>
           <p>No commitment. No pressure. Just honest advice from renovation experts.</p>
           <form onsubmit="handleFormSubmit(event)">
+            <input type="hidden" name="access_key" value="bc7c31da-3371-4593-8f62-61139caf6e8d" />
+            <input type="hidden" name="subject" value="New Free Estimate Request — RSC Renovations Website" />
+            <input type="hidden" name="from_name" value="RSC Renovations Website" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
@@ -2235,12 +2239,40 @@
     });
 
     // Form submission
-    function handleFormSubmit(e) {
+    // Form submission — sends to rscrenosltd@gmail.com via Web3Forms
+    async function handleFormSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = '&#10003; Request Sent! We\'ll contact you within 24 hours.';
-      btn.style.background = 'linear-gradient(135deg, #2E7D32, #1B5E20)';
+      const form = e.target;
+      const btn = form.querySelector('.form-submit');
+      const original = btn.innerHTML;
+      btn.textContent = 'Sending…';
       btn.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (res.ok && result.success) {
+          btn.innerHTML = '✓ Request Sent! We will get back to you as soon as possible.';
+          btn.style.background = 'linear-gradient(135deg, #2E7D32, #1B5E20)';
+          form.reset();
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (err) {
+        btn.innerHTML = '⚠ Something went wrong — please call or email us.';
+        btn.style.background = 'linear-gradient(135deg, #C62828, #8E0000)';
+        btn.disabled = false;
+        setTimeout(function () {
+          btn.innerHTML = original;
+          btn.style.background = '';
+        }, 5000);
+      }
     }
 
     // Smooth nav scroll
