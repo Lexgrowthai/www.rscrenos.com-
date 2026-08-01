@@ -1470,6 +1470,12 @@
   </style>
 </head>
 <body>
+  <script>
+    // Keep the homepage URL clean: strip a leftover #home hash
+    if (location.hash === '#home') {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
 
   <!-- NAV -->
   <nav>
